@@ -1,5 +1,7 @@
 package com.cargotracker.booking.interfaces.rest;
 
+import java.util.List;
+
 import com.cargotracker.booking.application.internal.commandservices.CargoBookingCommandService;
 import com.cargotracker.booking.application.internal.queryservices.CargoBookingQueryService;
 import com.cargotracker.booking.domain.model.aggregates.BookingId;
@@ -56,4 +58,15 @@ public class CargoBookingController {
     public Cargo findByBookingId(@RequestParam("bookingId") String bookingId){
         return cargoBookingQueryService.find(bookingId);
     }
+
+    /**
+     * GET method to retrieve all Cargo
+     * @param
+     * @return
+     */
+    @GetMapping("/getallCargo")
+    @ResponseBody
+    public List<Cargo> findByBookingId(){
+        return cargoBookingQueryService.findAll();
+    }    
 }
