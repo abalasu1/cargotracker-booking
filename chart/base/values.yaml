@@ -37,11 +37,11 @@ ingress:
 #  tlsSecretName: ""
 
 vcsInfo:
-  repoUrl: ""
-  branch: ""
+  repoUrl: "https://github.com/abalasu1/cargotracker-booking.git"
+  branch: "master"
 
-partOf: "cargotracker"
+partOf: "cargotracker-backend"
 
-connectsTo: ""
+connectsTo: "booking-db"
 
 runtime: spring
