@@ -22,10 +22,7 @@ public class CargoHandledEventHandler {
   private CargoBookingCommandService cargoBookingCommandService;
   
   @StreamListener(CargoEventSource.cargoHandlingChannel2)
-  public void receiveEvent(CargoHandledEvent cargoHandledEvent) {
-    //Process the Event
-  	//System.out.println("Cargo Handled Event" + cargoHandledEvent);
-  	
+  public void receiveEvent(CargoHandledEvent cargoHandledEvent) {  	
   	UpdateCargoCommand updatecargoCommand = HandlingActivityCommandEventAssembler.toCommandFromEvent (cargoHandledEvent);
   	cargoBookingCommandService.updateCargoDetails(updatecargoCommand);
   }

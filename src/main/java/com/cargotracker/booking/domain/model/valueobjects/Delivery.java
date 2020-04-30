@@ -144,11 +144,7 @@ public class Delivery {
         }
     }
 
-    private CargoHandlingActivity calculateNextExpectedActivity(RouteSpecification routeSpecification, CargoItinerary itinerary) {
-    	/*if (currentVoyage != null) { System.out.println("CURRENT VOYAGE=" + currentVoyage.getVoyageId()); }
-    	System.out.println("Route Specification 11=" + routeSpecification.toString());    	
-    	System.out.println("LEGS : " + itinerary.toString());*/
-    	
+    private CargoHandlingActivity calculateNextExpectedActivity(RouteSpecification routeSpecification, CargoItinerary itinerary) {    	
     	CargoHandlingActivity nextExpectedActivity = NO_ACTIVITY;
     	if (lastEvent == null) {
     		// First handling Event
