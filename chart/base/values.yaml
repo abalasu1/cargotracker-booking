@@ -6,6 +6,20 @@ global: {}
 replicaCount: 1
 logLevel: "debug"
 
+profiles:
+  active: ocp
+
+credentials:
+  dbusername: "Ym9va2luZ21zZGIK"
+  dbpassword: "Ym9va2luZ21zZGIK"
+  mqusername: "YXBwdXNlcgo="
+  mqpassword: "cGFzc3cwcmQK"
+
+datasources:
+  dburl: "jdbc:mysql://booking-db-svc:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+  mqhost: "rabbitmq-headless"
+  mqport: "5672"
+
 image:
   repository: replace
   tag: replace
