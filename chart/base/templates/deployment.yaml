@@ -61,6 +61,26 @@ spec:
               value: ""
             - name: LOG_LEVEL
               value: {{ .Values.logLevel | quote }}
+            - name: bookingdb.user.name
+              valueFrom:
+                secretKeyRef:
+                  name: cargotracker-booking-credentials
+                  key: bookingdb.user.name
+            - name: bookingdb.user.password
+              valueFrom:
+                secretKeyRef:
+                  name: cargotracker-booking-credentials
+                  key: bookingdb.user.password
+            - name: rabbitmq.user.name
+              valueFrom:
+                secretKeyRef:
+                  name: cargotracker-booking-credentials
+                  key: rabbitmq.user.name
+            - name: rabbitmq.user.password
+              valueFrom:
+                secretKeyRef:
+                  name: cargotracker-booking-credentials
+                  key: rabbitmq.user.password                                                 
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
