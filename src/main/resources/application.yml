@@ -17,12 +17,12 @@ spring:
           group: cargoHandlingsQueue2   
           contentType: 'application/json'                                      
   datasource:
-    url: "jdbc:mysql://booking-db-svc:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+    url: ${bookingdburl}
     username: ${bookingdb.user.name}
     password: ${bookingdb.user.password}
   rabbitmq:
-    host: rabbitmq-headless
-    port: 5672
+    host: ${rabbitmqhost}
+    port: ${rabbitmqport}
     username: ${rabbitmq.user.name}
     password: ${rabbitmq.user.password}   
 

@@ -80,7 +80,27 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: cargotracker-booking-credentials
-                  key: rabbitmq.user.password                                                 
+                  key: rabbitmq.user.password 
+            - name: rabbitmq.user.password
+              valueFrom:
+                secretKeyRef:
+                  name: cargotracker-booking-credentials
+                  key: rabbitmq.user.password
+            - name: bookingdburl
+              valueFrom:
+                secretKeyRef:
+                  name: booking-config
+                  key: bookingdburl
+            - name: rabbitmqhost
+              valueFrom:
+                secretKeyRef:
+                  name: booking-config
+                  key: rabbitmqhost
+            - name: rabbitmqport
+              valueFrom:
+                secretKeyRef:
+                  name: booking-config
+                  key: rabbitmqport                                                                                                                        
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
