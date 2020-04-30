@@ -2,7 +2,7 @@ apiVersion: v1
 data:
   bookingdburl: "jdbc:mysql://booking-db-svc:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
   rabbitmqhost: "rabbitmq-headless"
-  rabbitmqport: 5672 
+  rabbitmqport: "5672" 
 kind: ConfigMap
 metadata:
   name: booking-config
