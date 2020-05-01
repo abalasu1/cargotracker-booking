@@ -76,14 +76,14 @@ spring:
           group: cargoHandlingsQueue2   
           contentType: 'application/json'                                      
   datasource:
-    url: ${bookingdburl}
-    username: ${bookingdb.user.name}
-    password: ${bookingdb.user.password}
+    url: "jdbc:mysql://mysql-dev:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+    username: bookingmsdb
+    password: bookingmsdb
   rabbitmq:
-    host: ${rabbitmqhost}
-    port: ${rabbitmqport}
-    username: ${rabbitmq.user.name}
-    password: ${rabbitmq.user.password}   
+    host: rabbitmq-dev-headless
+    port: 5672
+    username: appuser
+    password: passw0rd   
 
 swagger:
   baseApiPackage:
