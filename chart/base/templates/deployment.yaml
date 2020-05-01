@@ -92,17 +92,17 @@ spec:
                   key: rabbitmq.user.password
             - name: bookingdburl
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: booking-config
                   key: bookingdburl
             - name: rabbitmqhost
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: booking-config
                   key: rabbitmqhost
             - name: rabbitmqport
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: booking-config
                   key: rabbitmqport                                                                                                                        
           resources:

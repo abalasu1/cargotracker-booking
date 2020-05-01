@@ -16,8 +16,8 @@ credentials:
   mqpassword: "cGFzc3cwcmQK"
 
 datasources:
-  dburl: "jdbc:mysql://booking-db-svc:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
-  mqhost: "rabbitmq-headless"
+  dburl: "jdbc:mysql://mysql-dev:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+  mqhost: "rabbitmq-dev-headless"
   mqport: "5672"
 
 image:
@@ -26,7 +26,7 @@ image:
   pullPolicy: IfNotPresent
   port: 8001
 
-nameOverride: ""
+nameOverride: "cargotracker-booking-dev"
 fullnameOverride: ""
 
 service:
@@ -54,8 +54,8 @@ vcsInfo:
   repoUrl: "https://github.com/abalasu1/cargotracker-booking.git"
   branch: "master"
 
-partOf: "cargotracker-backend"
+partOf: "cargotracker-backend-dev"
 
-connectsTo: "booking-db, rabbitmq, cargotracker-routing"
+connectsTo: "mysql-dev, rabbitmq-dev, cargotracker-routing-dev"
 
 runtime: spring
