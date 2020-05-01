@@ -10,10 +10,10 @@ profiles:
   active: ocp
 
 credentials:
-  dbusername: "Ym9va2luZ21zZGIK"
-  dbpassword: "Ym9va2luZ21zZGIK"
-  mqusername: "YXBwdXNlcgo="
-  mqpassword: "cGFzc3cwcmQK"
+  dbusername: "Ym9va2luZ21zZGI="
+  dbpassword: "Ym9va2luZ21zZGI="
+  mqusername: "YXBwdXNlcg=="
+  mqpassword: "cGFzc3cwcmQ="
 
 datasources:
   dburl: "jdbc:mysql://mysql-dev:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
