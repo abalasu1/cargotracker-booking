@@ -63,8 +63,6 @@ spec:
               value: {{ .Values.logLevel | quote }}
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.profiles.active | quote }}
-            - name: PORT
-              value: "8001"
             - name: bookingdb.user.name
               valueFrom:
                 secretKeyRef:
