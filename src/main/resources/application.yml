@@ -77,13 +77,13 @@ spring:
           contentType: 'application/json'                                      
   datasource:
     url: "jdbc:mysql://mysql-dev:3306/bookingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
-    username: bookingmsdb
-    password: bookingmsdb
+    username: ${bookingdb.user.name}
+    password: ${bookingdb.user.password}
   rabbitmq:
     host: rabbitmq-dev-headless
     port: 5672
-    username: appuser
-    password: passw0rd   
+    username: ${rabbitmq.user.name}
+    password: ${rabbitmq.user.password}   
 
 swagger:
   baseApiPackage:
