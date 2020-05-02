@@ -32,7 +32,7 @@ public class CargoBookingQueryService {
      */
    public List<BookingId> findAllBookingIds(){
        return cargoRepository.findAllBookingIds();
-   }
+    }
 
     /**
      * Find a specific Cargo based on its Booking Id

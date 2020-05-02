@@ -63,7 +63,7 @@ public class Cargo extends AbstractAggregateRoot<Cargo> {
 		this.origin = origin;
 		this.routeSpecification = routeSpecification;
 		this.itinerary = itinerary;
-		this.delivery = delivery;
+        this.delivery = delivery;
 	}
 
 	/**
@@ -117,6 +117,13 @@ public class Cargo extends AbstractAggregateRoot<Cargo> {
      */
     public CargoItinerary getItinerary() {
         return this.itinerary;
+    }
+
+    /**
+     * @return The Delivery Object
+     */
+    public Delivery getDelivery() {
+        return this.delivery;
     }
 
     /**
