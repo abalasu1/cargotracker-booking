@@ -37,7 +37,7 @@ public class ExternalCargoRoutingService {
         params.put("arrivalDeadline",routeSpecification.getArrivalDeadline().toString());
         
         String host = "cargotracker-routing";
-        if (activeProfile.equals("local")) host = "localhost";
+        if (activeProfile.equals("local")) host = "localhost:8003";
         
         TransitPath transitPath = restTemplate.getForObject("http://" + host + "/cargorouting/optimalRoute?origin=&destination=&deadline=",
                     TransitPath.class,params);
